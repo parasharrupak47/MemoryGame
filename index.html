@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Memory Game</h1>
-    <div id="game-board"></div>
-    <p id="status"></p>
-    <script src="script.js"></script
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Memory Game</h1>
+      <div class="controls">
+        <button id="easy" class="btn">Easy</button>
+        <button id="medium" class="btn">Medium</button>
+        <button id="hard" class="btn">Hard</button>
+      </div>
+      <button id="start" class="btn">Start Game</button>
+      <p id="status">Select a level to start!</p>
+      <div id="game-board" class="game-board"></div>
+      <div class="stop">
+        <button id="restart" class="btn">Restart</button>
+        <button id="exit" class="btn">Exit</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

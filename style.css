@@ -1,50 +1,95 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #6d2121;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
+    margin-bottom: 10px;
     color: #333;
 }
 
-#game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-    justify-content: center;
-    margin: 20px auto;
-}
-
-.card {
-    width: 100px;
-    height: 100px;
-    background-color: #4caf50;
+.btn {
+    background-color: #007bff;
     color: white;
-    font-size: 24px;
-    text-align: center;
-    line-height: 100px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
     cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-    transition: transform 0.3s ease;
+    font-size: 16px;
 }
 
-.card.flipped,
-.card.matched {
-    background-color: #f44336;
-    color: white;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-.card.matched {
-    background-color: #ffc107;
+.controls {
+    margin-bottom: 15px;
 }
 
 #status {
     font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stop{
     margin-top: 20px;
-    color: #555;
+}
+
+.game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background: #007bff;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card.flipped {
+    background: #28a745;
+    transform: scale(1.1);
+}
+
+.card.matched {
+    background: #6c757d;
+    cursor: default;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-board {
+        gap: 5px;
+    }
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
 }
